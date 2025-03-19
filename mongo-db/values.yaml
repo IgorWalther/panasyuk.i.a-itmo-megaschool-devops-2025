@@ -1,0 +1,22 @@
+auth:
+  enabled: true
+  rootPassword: olymp
+  username: olymp
+  password: olymp
+  database: auth
+
+persistence:
+  enabled: true
+  size: 2Gi
+
+replicaSet:
+  enabled: false
+
+global:
+  security:
+    allowInsecureImages: true
+image:
+  registry: docker.io
+  repository: dlavrenuek/bitnami-mongodb-arm
+  tag: "8.0.4"
+

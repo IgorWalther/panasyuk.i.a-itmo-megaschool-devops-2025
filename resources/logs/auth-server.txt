@@ -1,0 +1,10 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2025-03-19 14:19:20.172 | INFO     | app:startup:15 - Running auth server
+2025-03-19 14:19:20.175 | SUCCESS  | app:startup:23 - All envvars are present, server successfully started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60522 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60522 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60520 - "POST /api/v1/auth-server/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37698 - "GET /api/v1/auth-server/me?ntp_server=ntp0.ntp-servers.net HTTP/1.1" 200 OK

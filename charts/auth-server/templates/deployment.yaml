@@ -60,6 +60,17 @@ spec:
           volumeMounts:
             {{- toYaml . | nindent 12 }}
           {{- end }}
+          env:
+            - name: "MONGODB_CONN_STR"
+              valueFrom:
+                secretKeyRef:
+                  key:  mongo_url
+                  name: {{ .Release.Name }}-auth
+            - name: "TIMESERVER_URL"
+              valueFrom:
+                secretKeyRef:
+                  key:  time_server_url
+                  name: {{ .Release.Name }}-auth
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
